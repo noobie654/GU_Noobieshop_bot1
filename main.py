@@ -9,9 +9,10 @@ from telethon.tl.types import Channel, PeerChannel
 logging.basicConfig(level=logging.INFO)
 
 # Use environment variables for API ID, API hash, and bot token
-api_id = os.getenv('23748760', )
-api_hash = os.getenv('5350341C03CA519C0945A02D8A6C8036', )
-bot_token = os.getenv('7475923472:AAGI5K2W-KGLPQITLQQE1VWRYSMVTNSDHIK', )
+api_id = int(os.getenv('23748760', ''))
+api_hash = os.getenv('5350341c03ca519c0945a02d8a6c8036', '')
+bot_token = os.getenv('7475923472:AAGI5k2w-KglPQiTLQqe1VWrysmVtnSdHIk', '')
+
 
 # Ensure API ID is an integer
 try:
