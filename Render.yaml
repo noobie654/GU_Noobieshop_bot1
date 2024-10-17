@@ -1,6 +1,16 @@
 services:
-  - type: worker
-    name: GU_Noobieshop_bot
+  - type: web  # Changed from worker to web
+    name: gu_noobieshop_bot
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py"
+    plan: free  # Or another plan that fits your needs
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 your_bot_file.py  # Ensure this is the correct name of your bot's script
+    envVars:
+      - key: API_ID
+        fromEnv: API_ID
+      - key: API_HASH
+        fromEnv: API_HASH
+      - key: BOT_TOKEN
+        fromEnv: BOT_TOKEN
+      - key: PORT
+        fromEnv: PORT
